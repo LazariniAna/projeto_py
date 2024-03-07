@@ -1,0 +1,41 @@
+<!--colar toda a estrutura padrao (menu no header, footer, links iniciais)-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" media="screen" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/services">Services</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+                <li>
+                    <a href="{{url_for('about')}}">About</a>
+                </li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>
+        {{ var_titulo }}
+    </h1>
+    {% block conteudo %}{% endblock %}
+    <footer>
+        {% block rodape %}{% endblock %}
+    </footer>
+</body>
+
+</html>
